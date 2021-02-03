@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "just-bid-it"
+  "defaultProject": "just-bid-it",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,4 +1,20 @@
 <mat-toolbar color="primary">
-    JustBidIt
-    
+  <!-- Logo -->
+  <a mat-button><img class="logo" src="assets/img/logo.png" alt="JustBidIt(logo)" /></a>
+  <!-- Buttons -->
+  <div class="flex-container">
+    <div>
+      <a class="nav-button" mat-button>Home</a>
+    </div>
+    <div>
+      <button mat-raised-button class="nav-button" color="accent">
+        <mat-icon>login</mat-icon>
+        Log In
+      </button>
+      <button mat-raised-button class="nav-button" color="accent">
+        <mat-icon>person_add</mat-icon>
+        Register
+      </button>
+    </div>
+  </div>
 </mat-toolbar>
