@@ -1,19 +1,16 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="mat-elevation-z6">
   <!-- Logo -->
-  <a mat-button><img class="logo" src="assets/img/logo.png" alt="JustBidIt(logo)" /></a>
-  <!-- Buttons -->
+  <a routerLink="home"><img class="logo" src="assets/img/logo.png" alt="JustBidIt(logo)" /></a>
+  <!-- Navigation -->
   <div class="flex-container">
     <div>
-      <a class="nav-button" mat-button>Home</a>
+      <!-- Left side buttons -->
     </div>
     <div>
-      <button mat-raised-button class="nav-button" color="accent">
+      <!-- Right side buttons-->
+      <button mat-raised-button class="nav-button" routerLink="login">
         <mat-icon>login</mat-icon>
-        Log In
-      </button>
-      <button mat-raised-button class="nav-button" color="accent">
-        <mat-icon>person_add</mat-icon>
-        Register
+        Sign In
       </button>
     </div>
   </div>

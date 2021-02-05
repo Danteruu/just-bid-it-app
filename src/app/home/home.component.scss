@@ -1,0 +1,20 @@
+@import '../../styles.scss';
+
+.content {
+  background-image: url("../../assets/img/bentley6.jpg");
+  background-size: cover;
+  z-index: -1;
+}
+
+.search-bar {
+  height: 700px;
+  background: linear-gradient(
+    0deg,
+    rgb(0,0,0, 0.4),
+    rgb(33,33,33, 0.8)
+  );
+}
+
+.results {
+  background-color: #eee;
+}
