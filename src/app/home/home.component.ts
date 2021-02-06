@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +7,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private fb: FormBuilder) {}
+
+  makes: any[] = ['Audi'];
+  models: any[] = ['A3', 'A4', 'A5'];
+
+  constructor(private fb: FormBuilder) { }
 
   searchForm = this.fb.group({
     brand: [''],
@@ -20,5 +23,5 @@ export class HomeComponent implements OnInit {
     enginePowerTo: [''],
   });
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

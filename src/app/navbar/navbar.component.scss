@@ -1,6 +1,9 @@
 .logo {
-  height: 24px;
-  margin-top: 4px;
+  font-family: 'logo2', 'Arial', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 30pt;
+  padding: 4px 8px;
 }
 
 .flex-container {
@@ -12,8 +15,4 @@
 
 .nav-button {
   margin: 0 4px
-}
-
-.mat-raised-button mat-icon {
-  margin-right: 8px;
 }

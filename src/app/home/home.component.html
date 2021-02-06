@@ -1,46 +1,85 @@
-<div class="content">
-  <div class="search-bar">
-    <form>
-      <div class="row">
-        <div class="col-md-3">
-          <mat-form-field>
-            <input matInput placeholder="Brand" />
-          </mat-form-field>
-        </div>
-        <div class="col-md-3">
-          <mat-form-field>
-            <input matInput placeholder="Model" />
-          </mat-form-field>
-        </div>
-        <div class="col-md-3">
-          <mat-form-field>
-            <input matInput placeholder="Production Year From" />
-          </mat-form-field>
-        </div>
-        <div class="col-md-3">
-          <mat-form-field>
-            <input matInput placeholder="Production Year To" />
-          </mat-form-field>
-        </div>
+<div class="container">
+  <div class="top-section">
+    <div class="content">
+      <div class="tile search-tile mat-elevation-z4">
+        <form>
+          <h1>Search</h1>
+          <div class="fx-row">
+            <mat-form-field appearance="outline">
+              <mat-label>Make</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let make of makes" [value]="make">{{make}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Model</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let model of models" [value]="model">{{model}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Production Year From</mat-label>
+              <input matInput />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Production Year To</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+          <div class="fx-row">
+            <mat-form-field appearance="outline">
+              <mat-label>Engine Type</mat-label>
+              <input matInput />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Engine Power From</mat-label>
+              <input matInput />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Engine Power To</mat-label>
+              <input matInput />
+            </mat-form-field>
+          </div>
+        </form>
       </div>
-      <div class="row">
-        <div class="col-md-3">
-          <mat-form-field>
-            <input matInput placeholder="Engine Type" />
-          </mat-form-field>
-        </div>
-        <div class="col-md-3">
-          <mat-form-field>
-            <input matInput placeholder="Engine Power From" />
-          </mat-form-field>
-        </div>
+      <div class="tile login-tile mat-elevation-z4">
+        <h1>Or...</h1>
+        <mat-tab-group mat-stretch-tabs dynamicHeight [@.disabled]="true">
+          <mat-tab label="Login">
+            <form class="pt-16">
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput />
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" />
+              </mat-form-field>
+              <button mat-raised-button color="primary">Login</button>
+            </form>
+          </mat-tab>
+          <mat-tab label="Sign Up">
+            <form class="pt-16">
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput />
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" />
+              </mat-form-field>
+              <mat-checkbox class="mb-16" [disableRipple]="true">I agree to Just Bid It's <a>Terms of Service</a> and
+                <a>Privacy Policy</a></mat-checkbox>
+              <button mat-raised-button color="primary">Sign Up</button>
+            </form>
+          </mat-tab>
+        </mat-tab-group>
       </div>
-      <div class="col-md-3">
-        <mat-form-field>
-          <input matInput placeholder="Engine Power To" />
-        </mat-form-field>
-      </div>
-    </form>
+    </div>
   </div>
-  <div class="results"></div>
+  <div class="bottom-section">
+    <div class="content">
+
+    </div>
+  </div>
 </div>

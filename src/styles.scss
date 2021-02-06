@@ -11,23 +11,19 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$app-primary: mat-palette($mat-orange);
-$app-accent: mat-palette($mat-blue, A100, A400);
+$app-primary: mat-palette($mat-teal, 700);
+$app-accent: mat-palette($mat-orange, 600);
 
 // The warn palette is optional (defaults to red).
 $app-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$app-theme: mat-light-theme(
-  (
-    color: (
-      primary: $app-primary,
+$app-theme: mat-light-theme((color: (primary: $app-primary,
       accent: $app-accent,
       warn: $app-warn,
     ),
-  )
-);
+  ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -41,8 +37,31 @@ $warn: mat-color($app-warn);
 
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+  font-family: logo1;
+  src: url(assets/fonts/AquireBold-8Ma60.otf) format("opentype");
+}
+
+@font-face {
+  font-family: logo2;
+  src: url(assets/fonts/Spantaran-GE2D.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: logo3;
+  src: url(assets/fonts/Tarrget3DItalic-LdKg.otf) format("opentype");
+}
+
+@font-face {
+  font-family: logo4;
+  src: url(assets/fonts/TarrgetHalfToneRegular-gzRY.otf) format("opentype");
+}
+
+@import './layout-classes.scss';
+
 html,
 body {
+  background-color: rgb(0, 0, 0, 0.01);
   height: 100%;
 }
 
@@ -50,3 +69,26 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.mat-raised-button mat-icon {
+  margin-right: 10px;
+}
+
+.fx-row {
+  display: flex;
+}
+.fx-row > *:not(:first-child) {
+  margin-left: 16px;
+}
+
+.fx-row-right {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: right;
+}
+
+.fx-row-right *:not(:first-child) {
+  margin-right: 16px;
+}
+
+
