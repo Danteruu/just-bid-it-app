@@ -11,6 +11,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRippleModule } from '@angular/material/core';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,14 +19,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { LoginScreenComponent } from './login-screen/login-screen.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    LoginComponent
+    LoginScreenComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { LoginComponent } from './login/login.component';
     MatSelectModule,
     MatTabsModule,
     MatCheckboxModule,
-    MatRippleModule
+    MatRippleModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

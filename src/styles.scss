@@ -61,34 +61,31 @@ $warn: mat-color($app-warn);
 
 html,
 body {
-  background-color: rgb(0, 0, 0, 0.01);
+  background-color: rgb(0, 0, 0, 0.02);
   height: 100%;
-}
-
-body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 20px;
 }
 
 .mat-raised-button mat-icon {
   margin-right: 10px;
 }
 
-.fx-row {
-  display: flex;
-}
-.fx-row > *:not(:first-child) {
-  margin-left: 16px;
+::ng-deep .mat-form-field-wrapper .mat-form-field-infix {
+  width: 10px;
 }
 
-.fx-row-right {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: right;
+::ng-deep .mat-autocomplete-panel{
+  max-height: 400px;
 }
 
-.fx-row-right *:not(:first-child) {
-  margin-right: 16px;
+.mat-option {
+  font-size: 13px;
+  line-height: 36px;
+  height: 36px;
 }
-
-

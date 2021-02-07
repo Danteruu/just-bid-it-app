@@ -1,6 +1,6 @@
 @import '../../styles.scss';
 
-.wrapper {
+.container {
   position: relative;
   width: 100%;
   height: calc(100vh - 64px);
@@ -8,55 +8,62 @@
   overflow-y: auto;
 }
 
-.content{
+.section {
   display: flex;
   justify-content: center;
-  padding: 50px;
-  width: 70%;
 }
 
-.top-section {
-  background-image: url('../../assets/img/bentley6.jpg');
+.section-top {
+  background-image: url('../../assets/img/background.jpg');
   background-size: cover;
+}
+
+.section-bottom {
+  background: linear-gradient(0deg,
+      rgb(0, 0, 0, 0.25),
+      rgb(0, 0, 0, 0.15) 40px,
+      rgb(0, 0, 0, 0.02) 100px);
+}
+
+.content {
+  padding: 50px 0;
+  width: 80%;
+}
+
+.content-top {
   display: flex;
+  gap: 48px;
   justify-content: center;
 }
 
-.bottom-section{
-  background-color: rgb(0, 0, 0, 0.01);
+.content-bottom {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.tile{
-  background-color: rgb(255, 255, 255, 0.95);
+.tile {
+  background-color: rgb(250, 250, 250);
   padding: 24px;
-  border-radius: 4px; 
+  border-radius: 4px;
+  flex: 1 1 auto;
 }
 
-.search-tile {
-  
-}
-
-.login-tile {
-  margin-left: 48px;
-  width: 500px;
-}
-
-.login-tile button {
-  width: 100%;
+button {
   font-size: 12pt;
   height: 40px;
 }
 
-.login-tile mat-form-field {
-  width: 100%;
+.search-form{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-a {
-  color: $primary
-}
-
-a:hover {
-  color: $accent
+.search-button-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
