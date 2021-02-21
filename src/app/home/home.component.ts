@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   prices: number[] = [1000, 1500, 2000, 3000, 5000, 7500, 10000, 15000, 20000, 30000, 50000, 75000, 100000, 125000, 150000, 200000, 250000, 500000, 1000000];
   distances: number[] = [20000, 35000, 50000, 75000, 100000, 125000, 150000, 200000, 250000, 30000];
   bodyTypes: string[] = ['Hatchback', 'Saloon', 'Estate', 'MVC', 'SUV', 'Coupe', 'Cabrio'];
-  fuelTypes: string[] = ['Petrol', 'Diesel', 'Autogas/Hybrid (LPG)', 'Bi Fuel/Hybrid (CNG)', 'Electric', 'Electric/Hybrid'];
+  fuelTypes: string[] = ['Petrol', 'Diesel', 'Autogas (LPG)', 'Bi Fuel (CNG)', 'Electric', 'Electric/Hybrid'];
   powers: number[] = [50, 80, 120, 150, 200, 250, 300, 500];
   capacities: number[] = [1000, 1250, 1500, 2000, 2500, 3000, 4000, 5000, 6000, 7500];
   gearboxTypes: string[] = ['Manual', 'Automatic'];
@@ -45,6 +45,7 @@ export class HomeComponent implements OnInit {
       capacityMin: [''],
       gearbox: [''],
       driveType: [''],
+      country: [''],
     });
 
     this.searchForm.valueChanges.subscribe(console.log);

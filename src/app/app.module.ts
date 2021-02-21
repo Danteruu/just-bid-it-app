@@ -21,6 +21,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatToolbarModule,
