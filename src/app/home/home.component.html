@@ -25,7 +25,7 @@
                 <!-- Model -->
                 <mat-form-field appearance="outline">
                   <mat-label>Model</mat-label>
-                  <input matInput formControlName="model" [matAutocomplete]="autoModel" />
+                  <input matInput formControlName="model" [matAutocomplete]="autoModel"/>
                   <mat-autocomplete #autoModel="matAutocomplete">
                     <mat-option *ngFor="let model of models" [value]="model">
                       {{model}}
@@ -243,7 +243,7 @@
 
             <!-- Country -->
             <div class="col-labeled item1">
-              <span class="col-label">Additional Equipment</span>
+              <span class="col-label">Equipment</span>
               <div class="col">
                 <!-- Fuel Type -->
                 <mat-form-field appearance="outline">
@@ -257,7 +257,7 @@
           </div>
           <div class="search-button-container">
             <span>{{foundCount}} matching {{foundCount == 1 ? 'vehicle!' : 'vehicles!'}}</span>
-            <button mat-raised-button color="primary"> 
+            <button mat-raised-button (click)="search()" color="primary"> 
               <mat-icon>search</mat-icon>
               <span>Search</span>
             </button>
@@ -271,17 +271,15 @@
 
   <div class="section section-bottom">
     <div class="content content-bottom">
-
-      <h1>Featured Auctions</h1>
-      <div class="fx tile mat-elevation-z1" style="height: 120px;">
+      <h1>{{allAuctions.length==0 ? 'Offer of the day' : 'Search results'}}:</h1>
+      <div *ngIf="allAuctions.length==0" class="fx tile mat-elevation-z1" style="padding: 10px">
+        <app-auction-tile type="ood" [auction]="auctionOfTheDay"></app-auction-tile>
       </div>
-      <div class="fx tile mat-elevation-z1" style="height: 120px;">
+      <div class="content-bottom" *ngIf="allAuctions.length!=0">
+        <div *ngFor="let auction of allAuctions" class="fx tile mat-elevation-z1" style="padding: 10px">
+          <app-auction-tile [auction]="auction"></app-auction-tile>
+        </div>
       </div>
-      <div class="fx tile mat-elevation-z1" style="height: 120px;">
-      </div>
-      <div class="fx tile mat-elevation-z1" style="height: 120px;">
-      </div>
-
     </div>
   </div>
 </div>

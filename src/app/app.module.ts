@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuctionTileComponent } from './auction-tile/auction-tile.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     LoginScreenComponent,
     LoginFormComponent,
+    AuctionTileComponent,
   ],
   imports: [
     BrowserModule,
